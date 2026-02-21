@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Location</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+<h2>Add Location</h2>
+<input id="name" placeholder="Name">
+<input id="lat" placeholder="Latitude">
+<input id="lng" placeholder="Longitude">
+
+<select id="category">
+<option>Biriyani</option>
+<option>FastFood</option>
+<option>Coffee</option>
+</select>
+
+<button onclick="addLocation()">Save</button>
+<button onclick="logout()">Logout</button>
+</div>
+
+<script>
+if(localStorage.getItem("auth")!=="true"){
+  window.location.href="login.html";
+}
+
+function addLocation(){
+  let data=JSON.parse(localStorage.getItem("locations"))||[];
+
+  data.push({
+    name:name.value,
+    lat:parseFloat(lat.value),
+    lng:parseFloat(lng.value),
+    category:category.value
+  });
+
+  localStorage.setItem("locations",JSON.stringify(data));
+  alert("Saved!");
+}
+
+function logout(){
+  localStorage.removeItem("auth");
+  window.location.href="index.html";
+}
+</script>
+
+</body>
+</html>
