@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+<h2>Admin Login</h2>
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<button onclick="login()">Login</button>
+</div>
+
+<script>
+function login(){
+  if(username.value === "admin" && password.value === "1234"){
+    localStorage.setItem("auth","true");
+    window.location.href="admin.html";
+  } else {
+    alert("Wrong Login");
+  }
+}
+</script>
+
+</body>
+</html>
