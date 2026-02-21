@@ -1,0 +1,35 @@
+body { margin:0; font-family:Arial; }
+
+#map { height:90vh; }
+
+.topbar {
+  background:#1f7a4c;
+  padding:10px;
+}
+
+.topbar input {
+  padding:6px;
+}
+
+.topbar button, .admin-btn {
+  padding:6px 10px;
+  margin-left:5px;
+  background:white;
+  border:none;
+  cursor:pointer;
+  text-decoration:none;
+}
+
+.card {
+  width:300px;
+  margin:100px auto;
+  padding:20px;
+  background:#f2f2f2;
+  border-radius:8px;
+}
+
+.card input, select {
+  width:100%;
+  padding:8px;
+  margin-bottom:10px;
+}
